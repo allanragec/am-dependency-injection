@@ -1,0 +1,6 @@
+framework module Pods_SecurityManager {
+  umbrella header "Pods-SecurityManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

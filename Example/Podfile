@@ -1,0 +1,41 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'AMDependencyInjection_Example' do
+  pod 'AMDependencyInjection', :path => '../'
+
+  target 'AMDependencyInjection_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+target 'FeatureFlagAPI' do
+  pod 'AMDependencyInjection', :path => '../'
+end
+
+target 'FeatureFlag' do
+  pod 'AMDependencyInjection', :path => '../'
+end
+
+target 'SecurityManagerAPI' do
+  pod 'AMDependencyInjection', :path => '../'
+end
+
+target 'SecurityManager' do
+  pod 'AMDependencyInjection', :path => '../'
+end
+
+target 'AnalyticsAPI' do
+  pod 'AMDependencyInjection', :path => '../'
+end
+
+target 'Analytics' do
+  pod 'AMDependencyInjection', :path => '../'
+end
+
+target 'NetworkClient' do
+  pod 'AMDependencyInjection', :path => '../'
+end

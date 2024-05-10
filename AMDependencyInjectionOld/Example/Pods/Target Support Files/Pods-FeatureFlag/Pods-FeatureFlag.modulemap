@@ -1,0 +1,6 @@
+framework module Pods_FeatureFlag {
+  umbrella header "Pods-FeatureFlag-umbrella.h"
+
+  export *
+  module * { export * }
+}
