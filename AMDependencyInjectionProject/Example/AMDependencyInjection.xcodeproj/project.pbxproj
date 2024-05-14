@@ -20,6 +20,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		6786FA67DB79DDDB25CABEFE /* Pods_AMDependencyInjection_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B649885E425E68D9201577 /* Pods_AMDependencyInjection_Example.framework */; };
+		9E108DE52BF3991300BCA9F3 /* GlobalInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA8B2BEDDC8500DF738A /* GlobalInjection.swift */; };
 		BDCE0061BC716DB8E1391C40 /* Pods_FeatureFlag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77A857D88C47CC8071B13C2 /* Pods_FeatureFlag.framework */; };
 		CA32D247B846D53DE91E5F6C /* Pods_NetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823AA9FA89A979CFF6D6C8E3 /* Pods_NetworkClient.framework */; };
 		D256BA0E2BEDA06900DF738A /* SecurityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D256BA0D2BEDA06900DF738A /* SecurityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,7 +57,6 @@
 		D256BA862BEDBCFF00DF738A /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA852BEDBCFF00DF738A /* DependencyContainer.swift */; };
 		D256BA882BEDDAAB00DF738A /* FirebaseAnalyticsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA872BEDDAAB00DF738A /* FirebaseAnalyticsProtocol.swift */; };
 		D256BA8A2BEDDAF400DF738A /* FirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA892BEDDAF300DF738A /* FirebaseAnalytics.swift */; };
-		D256BA8C2BEDDC8500DF738A /* GlobalInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA8B2BEDDC8500DF738A /* GlobalInjection.swift */; };
 		D256BA8E2BEE5E5A00DF738A /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA8D2BEE5E5A00DF738A /* DependencyInjection.swift */; };
 		D256BA902BEE5E9F00DF738A /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D256BA8F2BEE5E9F00DF738A /* DependencyInjection.swift */; };
 		D256BA992BEE60F900DF738A /* NetworkClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D256BA982BEE60F900DF738A /* NetworkClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1191,6 +1191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E108DE52BF3991300BCA9F3 /* GlobalInjection.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -1251,7 +1252,6 @@
 				D256BA862BEDBCFF00DF738A /* DependencyContainer.swift in Sources */,
 				D256BA882BEDDAAB00DF738A /* FirebaseAnalyticsProtocol.swift in Sources */,
 				D256BA902BEE5E9F00DF738A /* DependencyInjection.swift in Sources */,
-				D256BA8C2BEDDC8500DF738A /* GlobalInjection.swift in Sources */,
 				D256BA842BEDBCCF00DF738A /* AnalyticsResolver.swift in Sources */,
 				D256BA8A2BEDDAF400DF738A /* FirebaseAnalytics.swift in Sources */,
 			);

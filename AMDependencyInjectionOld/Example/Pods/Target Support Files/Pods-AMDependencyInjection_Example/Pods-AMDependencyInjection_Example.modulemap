@@ -1,6 +1,0 @@
-framework module Pods_AMDependencyInjection_Example {
-  umbrella header "Pods-AMDependencyInjection_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}

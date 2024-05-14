@@ -1,6 +1,0 @@
-framework module Pods_AnalyticsAPI {
-  umbrella header "Pods-AnalyticsAPI-umbrella.h"
-
-  export *
-  module * { export * }
-}

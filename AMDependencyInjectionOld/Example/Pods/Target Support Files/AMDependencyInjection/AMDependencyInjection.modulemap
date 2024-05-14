@@ -1,6 +1,0 @@
-framework module AMDependencyInjection {
-  umbrella header "AMDependencyInjection-umbrella.h"
-
-  export *
-  module * { export * }
-}
