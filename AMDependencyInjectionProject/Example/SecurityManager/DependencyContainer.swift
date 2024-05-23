@@ -39,7 +39,7 @@ typealias SecurityManagerDependencies =
 //
 //
 
-public final class DependencyContainer: ContainerResolverPublic, SecurityManagerDependencies {
+public final class DependencyContainer: ContainerResolver, SecurityManagerDependencies {
     public static var resolver: DependencyResolver { SecurityManagerResolver.shared }
     
     lazy public var featureFlagService: FeatureFlagServiceProtocol = resolve()

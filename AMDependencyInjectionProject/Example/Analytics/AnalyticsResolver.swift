@@ -10,7 +10,7 @@ import Foundation
 import AMDependencyInjection
 
 class AnalyticsResolver: DependencyResolver {
+    static var injector: DependencyInjection { DependencyInjectionAnalytics() }
     static let shared: AnalyticsResolver = .init()
     private override init() {}
 }
-

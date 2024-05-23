@@ -8,8 +8,8 @@
 import Foundation
 
 @objc
-open class DependencyResolver: NSObject {
-    public static let global: DependencyResolver = .init()
+open class DependencyResolverInternal: NSObject {
+    public static let global: DependencyResolverInternal = .init()
     private(set) var dependenciesBag: [String: (type: Any.Type, resolver: () -> (Any))] = .init()
     public override init() {}
     
@@ -34,4 +34,19 @@ open class DependencyResolver: NSObject {
 
         return dependency
     }
+    
+    public func setupGlobal(injector: DependencyInjection) {
+        
+    }
 }
+
+//class GlobalDependencyResolver: DependencyResolverInternal, InjectionProtocol {
+//    static var injector: DependencyInjection { get }
+//}
+//
+//class GlobalInjection: DependencyInjection {
+//    static func inject() {
+//        DependencyResolverInternal.global
+//            .whenFindProtocol(FeatureFlagServiceProtocol.self, returns: { FeatureFlagService() })
+//    }
+//}

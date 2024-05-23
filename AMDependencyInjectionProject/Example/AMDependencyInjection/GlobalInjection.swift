@@ -13,7 +13,7 @@ import FeatureFlagAPI
 
 class GlobalInjection: DependencyInjection {
     static func inject() {
-        DependencyResolver.global
+        DependencyResolverInternal.global
             .whenFindProtocol(FeatureFlagServiceProtocol.self, returns: { FeatureFlagService() })
     }
 }

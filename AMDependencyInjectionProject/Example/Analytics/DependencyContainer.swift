@@ -14,7 +14,7 @@ typealias AnalyticsDependencies =
     HasFirebaseAnalytics &
     HasFeatureFlagService
 
-final class DependencyContainer: ContainerResolverPublic, AnalyticsDependencies {
+final class DependencyContainer: ContainerResolver, AnalyticsDependencies {
     public static var resolver: DependencyResolver { AnalyticsResolver.shared }
     
     lazy public var featureFlagService: FeatureFlagServiceProtocol = resolve()

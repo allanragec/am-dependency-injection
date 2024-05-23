@@ -17,21 +17,29 @@ public protocol ResolverProtocol {
     static var resolver: DependencyResolver { get }
 }
 
-public typealias ContainerResolverPublic = ContainerResolver & ResolverProtocol
+@objc
+public protocol InjectionProtocol {
+    static var injector: DependencyInjection { get }
+}
+
+public typealias ContainerResolver = ContainerResolverInternal & ResolverProtocol
+
+//
+public typealias DependencyResolver = DependencyResolverInternal & InjectionProtocol
 
 @objc
 public protocol ContainerResolverProtocol {
     func checkIfDependenciesCanBeResolved() throws
 }
 
-open class ContainerResolver: NSObject, ContainerResolverProtocol {
+open class ContainerResolverInternal: NSObject, ContainerResolverProtocol {
     public let resolver: DependencyResolver
     
     public required init(resolver: DependencyResolver) {
         self.resolver = resolver
     }
     
-    private func checkDependency(_ dependency: DependencyItem, resolver: DependencyResolver) throws {
+    private func checkDependency(_ dependency: DependencyItem, resolver: DependencyResolverInternal) throws {
         let contains = resolver.dependenciesBag.keys.contains { registeredDependency in
             registeredDependency.contains(dependency.propertyType)
         }
@@ -61,9 +69,9 @@ open class ContainerResolver: NSObject, ContainerResolverProtocol {
         }
     }
     
-    func getResolver(_ dependency: DependencyItem) -> DependencyResolver {
+    func getResolver(_ dependency: DependencyItem) -> DependencyResolverInternal {
         return isGlobalDependency(dependency) ?
-            DependencyResolver.global :
+            DependencyResolverInternal.global :
             self.resolver
     }
     

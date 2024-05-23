@@ -13,7 +13,7 @@ import FeatureFlagAPI
 typealias AnalyticsDependencies =
     HasFeatureFlagService
 
-final class DependencyContainer: ContainerResolverPublic, AnalyticsDependencies {
+final class DependencyContainer: ContainerResolver, AnalyticsDependencies {
     public static var resolver: DependencyResolver { NetworkClientResolver.shared }
     
     lazy public var featureFlagService: FeatureFlagServiceProtocol = resolve()

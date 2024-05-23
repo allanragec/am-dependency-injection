@@ -12,7 +12,7 @@ public class LoaderUtils: NSObject {
     @objc
     public static func injectDependencies() {
         let injections = getClasses(p: DependencyInjection.self)
-        print("injections \(injections)")
+        print("\(injections.count) - injections \(injections)")
         for injection in injections {
             let injectionName = injection.description()
             guard
@@ -28,11 +28,11 @@ public class LoaderUtils: NSObject {
     public static func checkAllContainers() {
 #if DEBUG
         let containers = getClasses(p: ResolverProtocol.self)
-        print("containers \(containers)")
+        print("\(containers.count) - containers \(containers)")
         for containerItem in containers {
             let containerName = containerItem.description()
             guard
-                let container = NSClassFromString(containerName) as? ContainerResolver.Type else {
+                let container = NSClassFromString(containerName) as? ContainerResolverInternal.Type else {
                 return
             }
             print("checkAllContainers on \(containerName)")

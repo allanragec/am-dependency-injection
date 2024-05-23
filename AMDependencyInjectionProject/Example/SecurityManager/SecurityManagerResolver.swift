@@ -10,6 +10,8 @@ import Foundation
 import AMDependencyInjection
 
 class SecurityManagerResolver: DependencyResolver {
+    static var injector: DependencyInjection { DependencyInjectionSec() }
+    
     static let shared: SecurityManagerResolver = .init()
     private override init() {}
 }
